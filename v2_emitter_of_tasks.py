@@ -5,6 +5,9 @@
     Author: Denise Case
     Date: January 15, 2023
 
+    Student/Editor: DeeDee Walker
+    Date: 1/29/23
+
 """
 
 import pika
@@ -63,6 +66,6 @@ if __name__ == "__main__":
     # if no arguments are provided, use the default message
     # use the join method to convert the list of arguments into a string
     # join by the space character inside the quotes
-    message = " ".join(sys.argv[1:]) or "Second task....."
+    message = " ".join(sys.argv[1:]) or "Fourth task........"
     # send the message to the queue
     send_message("localhost","task_queue2",message)

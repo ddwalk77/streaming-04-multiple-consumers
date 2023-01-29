@@ -5,6 +5,9 @@
     Author: Denise Case
     Date: January 15, 2023
 
+    Student/Editor: DeeDee Walker
+    Date: 1/29/23
+
 """
 
 import pika
