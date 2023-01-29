@@ -41,8 +41,8 @@ Will it terminate on its own? How do you know?
 - listening_worker.py doesn't terminate on it's own. The code doesn't have a connection termination without a KeyboardInterrupt that forces the exit. 
 
 v1 listeners:
-![v1 listener terminal script](https://github.com/ddwalk77/streaming-04-multiple-consumers/blob/main/v1_listener.png "v1 Listening terminal script")
-![v1 listener terminal2 script](https://github.com/ddwalk77/streaming-04-multiple-consumers/blob/main/v1_listener2.png "v1 Listening terminal2 script")
+![v1 listener terminal script](https://github.com/ddwalk77/streaming-04-multiple-consumers/blob/main/v1listener.png "v1 Listening terminal script")
+![v1 listener terminal2 script](https://github.com/ddwalk77/streaming-04-multiple-consumers/blob/main/v1listener2.png "v1 Listening terminal2 script")
 
 ## Ready for Work
 
@@ -64,8 +64,8 @@ Version 2 running:
 v2 emitter:
 ![v2 emitting terminal script](https://github.com/ddwalk77/streaming-04-multiple-consumers/blob/main/v2_emitter.png "v2 Emitting terminal script")
 v1 listeners:
-![v2 listener terminal script](https://github.com/ddwalk77/streaming-04-multiple-consumers/blob/main/v2_listener.png "v2 Listening terminal script")
-![v2 listener terminal2 script](https://github.com/ddwalk77/streaming-04-multiple-consumers/blob/main/v2_listener2.png "v2 Listening terminal2 script")
+![v2 listener terminal script](https://github.com/ddwalk77/streaming-04-multiple-consumers/blob/main/v2listener.png "v2 Listening terminal script")
+![v2 listener terminal2 script](https://github.com/ddwalk77/streaming-04-multiple-consumers/blob/main/v2listener2.png "v2 Listening terminal2 script")
 
 ## Reference
 
