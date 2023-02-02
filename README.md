@@ -37,8 +37,9 @@ Explore the RabbitMQ website.
 1. Run listening_worker.py
 
 Will it terminate on its own? How do you know? 
-<p style="color:green">
-- listening_worker.py doesn't terminate on it's own. The code doesn't have a connection termination without a KeyboardInterrupt that forces the exit. </p>
+'''diff
+# - listening_worker.py doesn't terminate on it's own. The code doesn't have a connection termination without a KeyboardInterrupt that forces the exit.
+'''
 
 v1 listeners:
 ![v1 listener terminal script](https://github.com/ddwalk77/streaming-04-multiple-consumers/blob/main/v1listener.png "v1 Listening terminal script")
@@ -58,12 +59,14 @@ v2 emitter:
 Follow the tutorial. 
 Add multiple tasks (e.g. First message, Second message, etc.)
 How are tasks distributed?
-<p style="color:green">
-- The tasks are rotated between the two consumers that are open.</p>
+'''diff
+# - The tasks are rotated between the two consumers that are open.
+'''
 Monitor the windows with at least two workers. 
 Which worker gets which tasks?
-<p style="color:green">
-- One worker gets the odd number messages and one gets the evens. </p>
+'''diff
+# - One worker gets the odd number messages and one gets the evens.
+'''
 
 Version 2 running:
 
@@ -74,25 +77,27 @@ v1 listeners:
 ## Reference
 
 - [RabbitMQ Tutorial - Work Queues](https://www.rabbitmq.com/tutorials/tutorial-two-python.html)
-<p style="color:green">
-    - Durable queues and messages: 
-        - In order to make sure that messages aren't lost if RabbitMQ quts or crashes, we must mark both the queue and messages as durable. This needs to be done in the code for the emitter and listener.
-        - The messages are marked as persistent byt supplying a delivery_mode property with the value of pika.spec.PERSISTENT_DELIVERY_MODE
-            - Ex for queue: channel.queue_declare(queue='task_queue', durable=True)
-            - Ex for messages: channel.basic_publish(exchange='',
-                                                     routing_key="task_queue",
-                                                     body=message,
-                                                     properties=pika.BasicProperties(
-                                                        delivery_mode = pika.spec.PERSISTENT_DELIVERY_MODE
-                                                     ))
-    - Consumer acknowledgements confirm the work was done and the message can be deleted.
-        - Ex: ch.basic_ack(delivery_tag = method.delivery_tag)</p>
+''' diff
+#   - Durable queues and messages: 
+#        - In order to make sure that messages aren't lost if RabbitMQ quts or crashes, we must mark both the queue and messages as durable. This needs to be done in the code for the emitter and listener.
+#        - The messages are marked as persistent byt supplying a delivery_mode property with the value of pika.spec.PERSISTENT_DELIVERY_MODE
+#            - Ex for queue: channel.queue_declare(queue='task_queue', durable=True)
+#            - Ex for messages: channel.basic_publish(exchange='',
+#                                                     routing_key="task_queue",
+#                                                     body=message,
+#                                                     properties=pika.BasicProperties(
+#                                                        delivery_mode = pika.spec.PERSISTENT_DELIVERY_MODE
+#                                                     ))
+#    - Consumer acknowledgements confirm the work was done and the message can be deleted.
+#        - Ex: ch.basic_ack(delivery_tag = method.delivery_tag)
+'''
 
 ## Project - Version 3 - Automating the Tasks
 - Build a verison 3 much like version 2, except read from tasks.csv. Multiple workers will retrieve the messages as they do in version 2
-<p style="color:green">
-- v3_emitter_of_tasks.py automatically runs the RabbitMQ admin panel to monitor messages, but this can be turned off through the variable show_offer. The file name can be updated if a different file is needed instead of tasks.csv. This script produces messages to the console from the csv file.
-- v3_listening_worker.py consumes the messages from the emitter/csv file and displays them on the console with confirmations of receipt.</p>
+'''diff
+# - v3_emitter_of_tasks.py automatically runs the RabbitMQ admin panel to monitor messages, but this can be turned off through the variable show_offer. The file name can be updated if a different file is needed instead of tasks.csv. This script produces messages to the console from the csv file.
+# - v3_listening_worker.py consumes the messages from the emitter/csv file and displays them on the console with confirmations of receipt.
+'''
 
 ## Screenshot
 
