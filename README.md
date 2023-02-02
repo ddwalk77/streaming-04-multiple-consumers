@@ -104,8 +104,9 @@ v1 listeners:
 - Build a verison 3 much like version 2, except read from tasks.csv. Multiple workers will retrieve the messages as they do in version 2
 ```diff
 # v3_emitter_of_tasks.py automatically runs the RabbitMQ admin panel to monitor messages, but this can 
-# be turned off through the variable show_offer. The file name can be updated if a different file is
-# needed instead of tasks.csv. This script produces messages to the console from the csv file.
+# be turned off through the variable show_offer. This script produces messages to the console from the
+# csv file. We pass the host, queue, and csv filename in to the function. This way we could run the
+# function for various parameters, making it more universal.
 
 # v3_listening_worker.py consumes the messages from the emitter/csv file and displays them on the console 
 # with confirmations of receipt.
