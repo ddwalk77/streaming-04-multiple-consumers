@@ -110,7 +110,7 @@ v1 listeners:
 # v3_listening_worker.py consumes the messages from the emitter/csv file and displays them on the console 
 # with confirmations of receipt.
 ```
-
 ## Screenshot
 
 See a running example with at least 3 concurrent process windows here:
+![v3 multi terminal screen script](https://github.com/ddwalk77/streaming-04-multiple-consumers/blob/main/3screens.png "v3 multi terminal screens script")
