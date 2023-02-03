@@ -36,7 +36,7 @@ def send_message(host: str, queue_name: str, file_name):
         queue_name (str): the name of the queue
 
     """
-    # read from a file to get the messages (aka data) to be sent - declaring variable input_file
+    # read from a file to get the messages (aka data) to be sent - declaring variable file_name
     with open(file_name, 'r') as file:
         # Create a csv reader for a comma delimited file
         reader = csv.reader(file, delimiter= '\n')
