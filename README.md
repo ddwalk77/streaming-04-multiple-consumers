@@ -85,7 +85,7 @@ v1 listeners:
 - [RabbitMQ Tutorial - Work Queues](https://www.rabbitmq.com/tutorials/tutorial-two-python.html)
 ```diff
 # Durable queues and messages: 
-#   - In order to make sure that messages aren't lost if RabbitMQ quts or crashes, we must mark both 
+#   - In order to make sure that messages aren't lost if RabbitMQ quits or crashes, we must mark both 
 #     the queue and messages as durable. This needs to be done in the code for the emitter and listener.
 #   - The messages are marked as persistent byt supplying a delivery_mode property with the value of 
 #     pika.spec.PERSISTENT_DELIVERY_MODE
